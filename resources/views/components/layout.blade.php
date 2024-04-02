@@ -14,12 +14,16 @@
         <!-- Styles -->
         
     </head>
-    <body >
+    <body>
            <x-nav/>
 
-           <div class="min-vh-100 ">
+           <div class="min-vh-100 slot">
                 {{$slot}}
+                <div class="text-center ">
+                    <h1 class="Menu"><a class="Menu" href="menu">Menu</a></h1>
+                </div>
            </div>
+           
 
            <x-footer/>
     </body>

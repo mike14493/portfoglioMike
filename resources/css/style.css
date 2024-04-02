@@ -1,3 +1,56 @@
-body {
-    background-color: aquamarine;
+@font-face {
+    font-family: 'nokiafc22';
+    src: url("/public/font/nokiafc22.ttf");
+
+}
+
+:root {
+    --pri: #a4a926;
+    --sec: #000000;
+    --ter: #000000;
+    --cua: #ffffff;
+  }
+
+body{
+    background-color: var(--pri);
+    font-family: 'nokiafc22';
+}
+
+h1{
+    color: var(--sec);
+}
+
+.customNav {
+    background-color: var(--pri);
+}
+
+.Menu {
+    margin-top: 28%;
+    font-size:70px;
+    text-decoration: none;
+    color:var(--sec)
+}
+
+.Titulo {
+    margin-top: 8%;
+}
+
+.slot {
+    background-image: url("/public/bgPortfoglio.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.H1{
+    font-size:70px
+}
+
+.navLogo{
+    font-size:40px
+}
+
+#reloj {
+    color: var(--sec);
+    font-size:70px;
+    margin-right: 150px;
 }
