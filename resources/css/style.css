@@ -54,3 +54,23 @@ h1{
     font-size:70px;
     margin-right: 150px;
 }
+
+.prevNext {
+    color: var(--sec);
+    font-size: 50px;
+}
+
+.optionMenu{
+    margin-top: 100px;
+}
+
+.TituloOptioMenu{
+    font-size: 75px;
+}
+
+.Select {
+    margin-top: 10%;
+    font-size:70px;
+    text-decoration: none;
+    color:var(--sec)
+}

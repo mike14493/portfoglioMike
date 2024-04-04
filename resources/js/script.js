@@ -14,3 +14,19 @@ window.onload = function() {
     actualizarReloj();
 };
 
+//PARA EL BOTON SELECT
+
+// Obtener el botón "Select" y el carrusel
+const selectButton = document.getElementById('selectLink');
+const carousel = document.querySelector('.carousel');
+
+// Agregar un evento de clic al botón "Select"
+selectButton.addEventListener('click', () => {
+    // Obtener la imagen activa en el carrusel
+    const activeImage = carousel.querySelector('.carousel-item.active img');
+
+    // Obtener el enlace de la imagen activa y redirigir
+    const imageUrl = activeImage.getAttribute('src');
+    window.location.href = imageUrl;
+});
+
