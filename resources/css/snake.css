@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'nokiafc22';
+    src: url("/public/font/nokiafc22.ttf");
+
+}
+
+:root {
+    --pri: #a4a926;
+    --sec: #000000;
+    --ter: #000000;
+    --cua: #ffffff;
+  }
+
+
+#board, .boardInfo {
+    max-width: 750px;
+    border: var(--sec) 7px solid;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#start, .boardInfo{
+    font-size: 25px;
+
+}
+
+#gameOver {
+    display: none;
+}
+
+.boardInfo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#start{
+    background-color: var(--pri);
+    border: none;
+    transition: text-shadow 0.3s;
+    font-size: 40px;
+}
+
+#start:active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajusta el sombreado del texto al hacer clic */
+  }
+
+/* #start:hover{
+    background-color: var(--sec);
+    color: var(--pri);
+} */
+
+#scoreBoard{
+    display: inline-flex;
+    font-size: 25px;
+}
+
+.square{
+    aspect-ratio: 1;
+}
+
+.emptySquare{
+    background-color: var(--pri);
+}
+
+.snakeSquare{
+    background-color: var(--sec);
+}
+
+.foodSquare{
+    background-color: var(--sec);
+}
+
+ /* Estilos generales */
+ body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el contenedor principal del juego */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Estilos para el contenedor del tablero y los elementos del juego */
+.game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para el tablero del juego */
+#board {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+/* Reglas de estilo para pantallas pequeñas (menos de 576px de ancho) */
+@media (max-width: 575.98px) {
+    #board {
+        max-width: 300px;
+        height: 300px;
+    }
+}
+
+/* Estilos para el contenedor de los elementos del juego */
+.game-info-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para el botón de inicio */
+#start {
+    margin-right: 10px; /* Espacio entre el botón de inicio y el marcador de puntuación */
+    margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
+}
+
+/* Estilos para el mensaje de "Game Over" */
+#gameOver {
+    margin-top: 20px; /* Espacio entre los elementos de juego y el mensaje de "Game Over" */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para los botones horizontales */
+.horizontal-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Añade un margen superior */
+}
+
+/* Estilos para los botones */
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.controls{
+    background-color: var(--sec);
+    color: var(--pri);
+    font-weight: 500;
+    border: none;
+    
+}
+
+.controls-container {
+    display: none; /* Oculta los controles por defecto */
+}
+
+/* Media query para pantallas más grandes que 768px (escritorio) */
+@media (max-width: 768px) {
+    .controls-container {
+        display: flex; /* Muestra los controles en pantallas grandes */
+    }
+}

@@ -20,19 +20,35 @@ h1{
     color: var(--sec);
 }
 
+.Negro {
+    color:var(--sec);
+}
+
 .customNav {
     background-color: var(--pri);
 }
 
 .Menu {
-    margin-top: 28%;
+    margin-top: 27%;
     font-size:70px;
     text-decoration: none;
-    color:var(--sec)
+    color:var(--sec);
+    transition: text-shadow 0.3s; /* Transición de sombreado de texto */
+}
+
+.Menu:active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajusta el sombreado del texto al hacer clic */
+  }
+
+@media (max-width: 575.98px) {
+    .Menu {
+        margin-top: 60%;
+        font-size:35px;
+    }
 }
 
 .Titulo {
-    margin-top: 8%;
+    margin-top: 10%;
 }
 
 .slot {
@@ -41,8 +57,22 @@ h1{
     background-position: center;
 }
 
+@media (max-width: 575.98px) {
+    .slot {
+        background-size: contain; /* Ajusta el tamaño para cubrir todo el contenedor */
+        background-position: 0% 15%; /* Centra la imagen */
+        background-attachment:scroll; /* Fija la imagen de fondo */
+    }
+}
+
 .H1{
     font-size:70px
+}
+
+@media (max-width: 575.98px) {
+    .H1 {
+        font-size:30px;
+    }
 }
 
 .navLogo{
@@ -53,6 +83,14 @@ h1{
     color: var(--sec);
     font-size:70px;
     margin-right: 150px;
+}
+
+/* Reglas de estilo para pantallas más pequeñas (por ejemplo, menos de 576px de ancho) */
+@media (max-width: 575.98px) {
+    #reloj {
+        font-size: 30px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+        margin-right: 0; /* Eliminar el margen derecho en dispositivos móviles si es necesario */
+    }
 }
 
 .prevNext {
@@ -68,9 +106,179 @@ h1{
     font-size: 75px;
 }
 
+@media (max-width: 575.98px) {
+    .TituloOptioMenu{
+        font-size: 35px;
+    }
+}
+
 .Select {
     margin-top: 10%;
     font-size:70px;
     text-decoration: none;
-    color:var(--sec)
+    color:var(--sec);
+    transition: text-shadow 0.3s; /* Transición de sombreado de texto */
+}
+
+.Select:active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajusta el sombreado del texto al hacer clic */
+  }
+
+@media (max-width: 575.98px) {
+    .Select{
+        font-size: 35px;
+    }
+}
+
+ .progettiLinks { 
+    
+    text-decoration: none;
+    color: var(--pri);
+    padding: 10px;
+    background-color: var(--sec);
+    border-radius: 5px;
+
+}  
+.progettiLinks:hover { 
+    
+    color: var(--pri);
+    background-color: #1f1f1f;
+}
+
+.tonos{
+    text-decoration: none;
+    color: var(--sec);
+    padding: 15px;
+}
+
+/* .tonos :hover{
+    
+    color: var(--pri);
+    background-color: var(--sec);
+} */
+
+.Games {
+    height: 100vh;
+}
+
+.Vibora{
+    transition: text-shadow 0.3s;
+    font-size: 40px;
+}
+
+.Vibora:active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajusta el sombreado del texto al hacer clic */
+  }
+
+@media (max-width: 575.98px) {
+    .Vibora{
+        font-size: 35px;
+    }
+}
+
+
+
+.mobile-image {
+    display: none;
+}
+
+/* Reglas de estilo para pantallas más pequeñas (por ejemplo, menos de 576px de ancho) */
+@media (max-width: 575.98px) {
+    /* Oculta las imágenes de escritorio en la versión móvil */
+    .desktop-image {
+        display: none;
+    }
+
+    /* Muestra las imágenes de móvil en la versión móvil */
+    .mobile-image {
+        display: inline;
+    }
+}
+
+.navbar-brand {
+    /* Estilos para el texto en la versión de escritorio */
+    font-size: 35px; /* Tamaño de fuente para la versión de escritorio */
+}
+
+/* Reglas de estilo para pantallas más pequeñas (por ejemplo, menos de 576px de ancho) */
+@media (max-width: 575.98px) {
+    /* Estilos específicos para la versión móvil */
+    .navbar-brand {
+        /* Tamaño de fuente más pequeño para la versión móvil */
+        font-size: 18px;
+    }
+}
+
+/* CAMBIANDO LOS COLORES DEL REPRODUCTOR DE AUDIO */
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--pri); /* Cambia el color de fondo */
+}
+
+/* Cambia el color del texto de los controles */
+audio::-webkit-media-controls-panel {
+    color: var(--pri); /* Cambia el color del texto */
+}
+
+/* Cambia el color del fondo del botón de reproducción */
+audio::-webkit-media-controls-play-button {
+    background-color: var(--pri); /* Cambia el color de fondo */
+}
+
+/* Cambia el color del icono del botón de reproducción */
+audio::-webkit-media-controls-play-button::before {
+    color: var(--pri); /* Cambia el color del icono */
+}
+
+/* Cambia el color del fondo del botón de pausa */
+audio::-webkit-media-controls-pause-button {
+    background-color: #ccc; /* Cambia el color de fondo */
+}
+
+/* Cambia el color del icono del botón de pausa */
+audio::-webkit-media-controls-pause-button::before {
+    color: var(--pri); /* Cambia el color del icono */
+}
+
+/* Cambia el color del fondo del botón de volumen */
+audio::-webkit-media-controls-volume-slider {
+    background-color: #ccc; /* Cambia el color de fondo */
+}
+
+/* Cambia el color del cursor del botón de volumen */
+audio::-webkit-media-controls-volume-slider::-webkit-slider-thumb {
+    background-color: var(--pri); /* Cambia el color del cursor */
+}
+
+/* Estilo base del botón */
+.buttonClick {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor apuntador */
+    border-radius: 8px; /* Radio de borde */
+    transition: text-shadow 0.3s; /* Transición de sombreado de texto */
+  }
+  
+  /* Estilo cuando el botón está activo (clicado) */
+  .buttonClick:active {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ajusta el sombreado del texto al hacer clic */
+  }
+
+  
+
+  @media (max-width: 575.98px) {
+    .quienSoy{
+        font-size: 13px;
+    }
+}
+
+.Social:hover {
+    color:#1f1f1f;;
 }

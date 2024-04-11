@@ -16,17 +16,28 @@ window.onload = function() {
 
 //PARA EL BOTON SELECT
 
-// Obtener el botón "Select" y el carrusel
-const selectButton = document.getElementById('selectLink');
-const carousel = document.querySelector('.carousel');
+document.addEventListener('DOMContentLoaded', function() {
+            var selectLink = document.getElementById('selectLink');
+            var carouselItems = document.querySelectorAll('.carousel-item');
 
-// Agregar un evento de clic al botón "Select"
-selectButton.addEventListener('click', () => {
-    // Obtener la imagen activa en el carrusel
-    const activeImage = carousel.querySelector('.carousel-item.active img');
+            selectLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita que se siga el enlace
 
-    // Obtener el enlace de la imagen activa y redirigir
-    const imageUrl = activeImage.getAttribute('src');
-    window.location.href = imageUrl;
-});
+                // Encuentra el índice de la imagen activa en el carrusel
+                var activeIndex = Array.from(carouselItems).findIndex(item => item.classList.contains('active'));
+
+                // Obtiene el enlace asociado a la imagen activa
+                var activeLink = carouselItems[activeIndex].querySelector('a').getAttribute('href');
+
+                // Redirige a la URL del enlace asociado a la imagen activa
+                window.location.href = activeLink;
+            });
+        });
+//PARA REPRODUCIR LOS AUDIOS
+
+function playAudio(audioSrc) {
+    var audio = document.getElementById('audioPlayer');
+    audio.src = audioSrc;
+    audio.play();
+}
 

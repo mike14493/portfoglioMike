@@ -1,38 +1,24 @@
 <nav class="navbar navbar-expand-lg customNav">
-    <div class="container-fluid">
-      <a class="navbar-brand navLogo" href="#">< M/C ></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <div class="container-fluid">
+      <a class="navbar-brand navLogo" href="/">< M/C ></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><img src="/llave nokia.jpg" alt=""></a>
+              <!-- Imagen para la versión de escritorio -->
+              <a class="nav-link active" aria-current="page" href="/">
+                  <img class="desktop-image" src="/casa-desktop.jpg" alt="">
+                  <!-- Imagen para la versión móvil -->
+                  {{-- <img class="mobile-image" src="/casa-mobile.jpg" alt=""> --}}
+              </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="/mensaje de voz.jpg" alt=""></a>
+              <!-- Imagen para la versión de escritorio -->
+              <a class="nav-link" id="returnLink" onclick="history.back(); return false;" href="#">
+                  <img class="desktop-image" src="/return-desktop.jpg" alt="">
+                  <!-- Imagen para la versión móvil -->
+                  <img class="mobile-image" src="/return-mobile.jpg" alt="">
+              </a>
           </li>
-          {{-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li> --}}
-        </ul>
-        {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
-        <div id="reloj"></div>
-
-      </div>
-    </div>
-  </nav>
+      </ul>
+      <div id="reloj"></div>
+  </div>
+</nav>
